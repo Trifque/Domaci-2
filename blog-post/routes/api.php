@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RobotController;
 use App\Http\Controllers\KeyComponentController;
+use App\Http\Controllers\API\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,8 @@ Route::get('/specificComponent/{id}',[KeyComponentController::class, 'returnSpec
 /*SVI SET ZAHTEVI*/
 
 //Users
-Route::post('/createUser', [UserController::class, 'createUser']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
 
 //Robots
 Route::post('/createRobot', [RobotController::class, 'createRobot']);
