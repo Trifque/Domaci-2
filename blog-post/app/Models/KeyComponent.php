@@ -16,6 +16,7 @@ class KeyComponent extends Model
         'purpose',
         'size',
         'number_of_moving_parts',
+        'manufacturer_id'
     ];
 
     public function manufacturer(){return $this->belongsTo(User::class);}

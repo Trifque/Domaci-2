@@ -18,6 +18,8 @@ class Robot extends Model
         'height',
         'weight',
         'cost',
+        'creator_id',
+        'key_component_id'
     ];
 
     public function creator(){return $this->belongsTo(User::class);}
